@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "12345678",
+      "name": "Admin"
+    },
+    {
+      "email": "kirill@gmail.com",
+      "password": "111111",
+      "name": "Kirill",
+      "id": 2
+    }
+  ],
+  "bill": {
+    "value": 10000,
+    "currency": "UAH"
+  },
+  "categories": [
+    {
+      "name": "Дом",
+      "capacity": 1000,
+      "id": 1
+    },
+    {
+      "name": "Еда",
+      "capacity": 2000,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Машина",
+      "capacity": 1000
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "income",
+      "amount": 200,
+      "category": 2,
+      "date": "12.06.2017 19:49:02",
+      "description": "Покупка еды в магазине"
+    },
+    {
+      "id": 2,
+      "type": "outcome",
+      "amount": 500,
+      "category": 1,
+      "date": "13.06.2017 19:49:02",
+      "description": "Купил посудомоечную машину"
+    },
+    {
+      "type": "income",
+      "amount": 100,
+      "category": 2,
+      "date": "17.06.2017 14:00:48",
+      "id": 3,
+      "description": "Поход в окей с баллами. Бесплатная еда"
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "category": 2,
+      "date": "17.06.2017 14:00:58",
+      "id": 4,
+      "description": "Закупка на неделю"
+    },
+    {
+      "type": "outcome",
+      "amount": 800,
+      "category": 3,
+      "date": "10.06.2017 14:01:58",
+      "id": 5,
+      "description": "Заправка + проход ТО"
+    }
+  ]
+}
