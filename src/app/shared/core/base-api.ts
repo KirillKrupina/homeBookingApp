@@ -9,28 +9,22 @@ export class BaseApi {
 
   constructor(public http: HttpClient) {}
 
-  private getUlr(url: string = ''): string {
+  private getUrl(url: string = ''): string {
     return this.baseUrl + url;
   }
 
   public get(url: string = ''): Observable<any> {
-    return this.http.get(this.getUlr(url))
-      .pipe(
-        map((response: Response) => response)
-      );
+    return this.http.get(this.getUrl(url))
+      .pipe(map((response: Response) => response));
   }
 
   public post(url: string = '', data: any = {}): Observable<any> {
-    return this.http.post(this.getUlr(url), data)
-      .pipe(
-        map((response: Response) => response)
-      );
+    return this.http.post(this.getUrl(url), data)
+      .pipe(map((response: Response) => response));
   }
 
   public put(url: string = '', data: any = {}): Observable<any> {
-    return this.http.put(this.getUlr(url), data)
-      .pipe(
-        map((response: Response) => response)
-      );
+    return this.http.put(this.getUrl(url), data)
+      .pipe(map((response: Response) => response));
   }
 }

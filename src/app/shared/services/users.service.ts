@@ -20,7 +20,7 @@ export class UsersService extends BaseApi {
   //         map((user: User[]) => user[0] ? user[0] : undefined)
   //     );
   // }
-
+  //
   // createNewUser(user: User): Observable<any> {
   //   return this.http.post('http://localhost:3000/users', user)
   //     .pipe(
@@ -30,7 +30,10 @@ export class UsersService extends BaseApi {
 
 
   getUserByEmail(email: string): Observable<User> {
-    return this.get(`users?email=${email}`);
+    return this.get(`users?email=${email}`)
+      .pipe(
+        map((users: User[]) => users[0] ? users[0] : undefined)
+      );
   }
 
   createNewUser(user: User): Observable<User> {
