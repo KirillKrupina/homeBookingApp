@@ -19,4 +19,8 @@ export class EventsService extends BaseApi {
   getEvents(): Observable<RecordEvent[]> {
     return this.get('events');
   }
+
+  getEventById(id: string): Observable<RecordEvent> {
+    return this.get(`events/${id}`);
+  }
 }

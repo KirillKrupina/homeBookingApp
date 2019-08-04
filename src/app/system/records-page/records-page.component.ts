@@ -23,7 +23,6 @@ export class RecordsPageComponent implements OnInit {
       });
   }
 
-
   newCategoryAdded(category: Category) {
     this.categories.push(category);
   }
