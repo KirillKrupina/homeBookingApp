@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {combineLatest, Subscription} from 'rxjs';
-import {delay} from 'rxjs/operators';
 
 import {BillService} from '../shared/services/bill.service';
 import {Bill} from '../shared/models/bill.model';
@@ -46,11 +45,8 @@ export class BillPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.firstSubscription.unsubscribe();
-    if (this.secondSubscription) {
-      this.secondSubscription.unsubscribe();
-    }
-
+    if (this.firstSubscription) { this.firstSubscription.unsubscribe(); }
+    if (this.secondSubscription) { this.secondSubscription.unsubscribe(); }
   }
 
 }

@@ -6,5 +6,6 @@ export class RecordEvent {
     public date: string,
     public description: string,
     public id?: string,
+    public categoryName?: string
   ) {}
 }
