@@ -41,7 +41,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let e of events | appFilter: searchValue : searchField ; let idx = index">
+            <tr *ngFor="let e of events | appFilter: searchValue : searchField  | reverse; let idx = index">
               <th scope="row">{{ idx + 1 }}</th>
               <td>{{ e.amount | number:'1.2' }}</td>
               <td>{{ e.date | appMoment: 'DD.MM.YYYY HH:mm:ss' }}</td>
